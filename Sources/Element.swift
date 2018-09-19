@@ -939,7 +939,7 @@ open class Element: Node {
     public func text()throws->String {
         let accum: StringBuilder = StringBuilder()
         try NodeTraversor(textNodeVisitor(accum)).traverse(self)
-        return accum.toString().trim()
+        return accum.toString()
     }
 
     /**
